@@ -10,23 +10,30 @@ function BottonInfo(props) {
   );
 }
 
-export default function PostBottom(props) {
+export default function PostBottom({
+  source,
+  wholiked,
+  qntlikes,
+  heartSelected,
+  setheartSelected,
+}) {
   return (
     <div className="post-bottom">
       <div className="icons-bottom">
         <section>
-          <ion-icon name="heart-outline"></ion-icon>
+          <ion-icon
+            style={{ color: heartSelected ? "red" : "black" }}
+            onClick={() => setheartSelected(!heartSelected)} // heartSelected === true ? false : true
+            name={heartSelected ? "heart" : "heart-outline"}
+          ></ion-icon>
+
           <ion-icon name="chatbubble-outline"></ion-icon>
           <ion-icon name="paper-plane-outline"></ion-icon>
         </section>
 
         <ion-icon name="bookmark-outline"></ion-icon>
       </div>
-      <BottonInfo
-        source={props.source}
-        wholiked={props.wholiked}
-        qntlikes={props.qntlikes}
-      />
+      <BottonInfo source={source} wholiked={wholiked} qntlikes={qntlikes} />
     </div>
   );
 }

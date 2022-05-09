@@ -9,7 +9,12 @@ function Video(props) {
 
 export default function PostMiddle(props) {
   return (
-    <div className="post-img">
+    <div
+      className="post-img"
+      onClick={() => {
+        if (!props.heartSelected) props.setheartSelected(!props.heartSelected);
+      }}
+    >
       {props.type === "video" ? (
         <Video
           source1={props.source + ".mp4"}
