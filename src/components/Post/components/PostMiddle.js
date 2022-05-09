@@ -11,8 +11,9 @@ export default function PostMiddle(props) {
   return (
     <div
       className="post-img"
-      onClick={() => {
-        if (!props.heartSelected) props.setheartSelected(!props.heartSelected);
+      onClick={(event) => {
+        if (!props.heartSelected && event.detail === 2)
+          props.setheartSelected(!props.heartSelected);
       }}
     >
       {props.type === "video" ? (
