@@ -343,7 +343,7 @@ ion-icon:hover {
 
   .container {
     justify-content: center;
-    width: 614px;
+    max-width: 614px;
   }
 }
 

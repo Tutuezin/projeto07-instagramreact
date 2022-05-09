@@ -1,28 +1,18 @@
 import Post from "./Post";
+import infoPost from "./InfoPost";
 
 export default function Posts() {
-  const infoPost = [
-    {
-      topInfo: {
-        source: "",
-        title: "",
-      },
-      middleInfo: {
-        type: "",
-        source: "",
-      },
-      bottomInfo: {
-        source: "",
-        wholiked: "",
-        qntLikes: "",
-      },
-    },
-  ];
-
   return (
     <div className="posts">
-      {infoPost.map((item) => {
-        return <Post props={item} />;
+      {infoPost.map((item, index) => {
+        return (
+          <Post
+            key={index}
+            topInfo={item.topInfo}
+            middleInfo={item.middleInfo}
+            bottomInfo={item.bottomInfo}
+          />
+        );
       })}
     </div>
   );

@@ -10,7 +10,7 @@ function BottonInfo(props) {
   );
 }
 
-export default function PostBottom() {
+export default function PostBottom(props) {
   return (
     <div className="post-bottom">
       <div className="icons-bottom">
@@ -23,9 +23,9 @@ export default function PostBottom() {
         <ion-icon name="bookmark-outline"></ion-icon>
       </div>
       <BottonInfo
-        source="./images/like-respondeai.png"
-        wholiked="respondeai"
-        qntlikes=" 211.276"
+        source={props.source}
+        wholiked={props.wholiked}
+        qntlikes={props.qntlikes}
       />
     </div>
   );

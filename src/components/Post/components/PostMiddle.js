@@ -10,12 +10,16 @@ function Video(props) {
 export default function PostMiddle(props) {
   return (
     <div className="post-img">
-      <Video
-        source1="./images/video.mp4"
-        type1="video/mp4"
-        source2="./images/video.ogv"
-        type2="video/ogg"
-      />
+      {props.type === "video" ? (
+        <Video
+          source1={props.source + ".mp4"}
+          type1="video/mp4"
+          source2={props.source + ".ovg"}
+          type2="video/ovg"
+        />
+      ) : (
+        <img src={props.source + ".png"} alt="" />
+      )}
     </div>
   );
 }

@@ -47,8 +47,8 @@ export default function Stories() {
 
   return (
     <div className="box-stories">
-      {storieIcons.map((item) => (
-        <Storie source={item.source} title={item.title} />
+      {storieIcons.map((item, index) => (
+        <Storie key={index} source={item.source} title={item.title} />
       ))}
       <div className="vector">
         <img src="./images/Vector.svg" alt="Storie button" />

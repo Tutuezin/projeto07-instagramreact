@@ -9,7 +9,19 @@ export default function Container() {
         <div className="home">
           <Stories />
           <Posts />
-          <Aside />
+        </div>
+        <Aside
+          ig="alcantaratutu"
+          title="Arthur Alcantara"
+          source="./images/eu.png"
+          alt="Tutuzera from brazil"
+        />
+        <div className="mobile">
+          <ion-icon name="home"></ion-icon>
+          <ion-icon name="search"></ion-icon>
+          <ion-icon name="add-circle-outline"></ion-icon>
+          <ion-icon name="heart-outline"></ion-icon>
+          <ion-icon name="person-outline"></ion-icon>
         </div>
       </div>
     </main>
